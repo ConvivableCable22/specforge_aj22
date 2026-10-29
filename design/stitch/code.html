@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#0b3c43","primary-container":"#0a444e","on-primary":"#ffffff","on-primary-container":"#c3e7ec","secondary":"#9a6b18","secondary-container":"#fcf5e5","on-secondary":"#ffffff","on-secondary-container":"#6b4907","tertiary":"#179ea1","tertiary-container":"#e0f7f8","on-tertiary":"#ffffff","on-tertiary-container":"#084c4e","background":"#f4f7f6","surface":"#f8fafb","surface-dim":"#d8e2e2","surface-bright":"#f8fafb","surface-container-lowest":"#ffffff","surface-container-low":"#eef4f4","surface-container":"#e4eeee","surface-container-high":"#d9e6e6","surface-container-highest":"#cedfdf","on-surface":"#0f2327","on-surface-variant":"#52606d","outline":"#718182","outline-variant":"#cbd6d6","surface-card":"#ffffff","border-subtle":"#e2e8f0","gold":"#b88730","gold-light":"#fef8ec","gold-border":"#e6ca85","cyan-accent":"#1eb4b6","slate-heading":"#0f2327","slate-muted":"#52606d","error":"#ba1a1a","error-container":"#ffdad6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","space-md":"0.75rem","space-xl":"1.5rem","gutter":"1.5rem","space-lg":"1rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"code-tabular":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"display-sm":["Inter"],"headline-sm":["Inter"],"title-md":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},fontSize:{"code-tabular":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"display-sm":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-[#f4f7f6] font-body-md text-[#0f2327] antialiased selection:bg-[#0b3c43]/15 selection:text-[#0b3c43]"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-white border-b border-[#cbd6d6] flex items-center justify-between px-gutter"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-[#0b3c43] shadow-sm flex items-center justify-center"><span class="material-symbols-outlined text-white text-[20px]">account_balance</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-[#0b3c43] font-bold tracking-tight leading-none">SpecForge</span><span class="font-label-sm text-label-sm text-[#9a6b18] font-bold uppercase tracking-wider">Curriculum Engine</span></div></div><div class="h-4 w-px bg-[#cbd6d6]"></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[#52606d] text-[16px]">school</span><span class="font-title-sm text-title-sm text-[#0f2327] tracking-tight font-semibold">CS302 - Operating Systems</span><span class="font-body-sm text-body-sm text-[#52606d]">(AY 2024-25)</span><span class="font-body-sm text-body-sm text-[#718182] mx-1">/</span><span class="font-body-sm text-body-sm text-[#0b3c43] font-semibold">Export &amp; Package</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center border border-[#cbd6d6] rounded-md p-0.5 bg-[#eef4f4]"><button class="px-space-sm py-0.5 rounded text-label-md font-label-md bg-[#0b3c43] text-white shadow-xs" type="button">Author</button><button class="px-space-sm py-0.5 rounded text-label-md font-label-md text-[#52606d] hover:text-[#0f2327]" type="button">Reviewer</button><button class="px-space-sm py-0.5 rounded text-label-md font-label-md text-[#52606d] hover:text-[#0f2327]" type="button">HOD</button></div><div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-[#e6ca85] bg-[#fef8ec] text-[#8a5d12] font-label-sm text-label-sm uppercase tracking-wide font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#b88730]"></span><span>Approved / Ready for Export</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-[#179ea1]/30 bg-[#e0f7f8] text-[#084c4e] font-label-sm text-label-sm uppercase tracking-wide font-semibold"><span class="material-symbols-outlined text-[14px] text-[#179ea1]">smart_toy</span><span>AI Connected</span></div><div class="h-4 w-px bg-[#cbd6d6]"></div><div class="flex items-center gap-space-sm"><a class="w-8 h-8 rounded-lg flex items-center justify-center text-[#52606d] hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors" href="#" title="Settings"><span class="material-symbols-outlined text-[20px]">settings</span></a><div class="w-8 h-8 rounded-full bg-[#0b3c43] flex items-center justify-center shadow-xs"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-white border-r border-[#cbd6d6] z-40 flex flex-col justify-between pt-space-lg pb-space-lg"><div class="flex flex-col"><div class="px-gutter mb-space-md"><div class="font-label-sm text-label-sm uppercase text-[#9a6b18] font-bold tracking-wider">Curriculum Pipeline</div><div class="font-body-sm text-body-sm text-[#52606d]">Accreditation Phase 1</div></div><nav class="flex flex-col space-y-0.5 w-full"><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm text-[#52606d] hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors border-l-2 border-transparent" data-path="upload" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular border border-[#cbd6d6] text-[#52606d]">1</span><span>1. Upload</span></a><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm text-[#52606d] hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors border-l-2 border-transparent" data-path="spec-details" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular border border-[#cbd6d6] text-[#52606d]">2</span><span>2. Spec Details</span></a><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm text-[#52606d] hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors border-l-2 border-transparent" data-path="co-po-pso-map" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular border border-[#cbd6d6] text-[#52606d]">3</span><span>3. CO-PO-PSO Map</span></a><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm text-on-surface-variant hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors border-l-2 border-transparent" data-path="automated-checks" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular border border-[#cbd6d6] text-[#52606d]">4</span><span>4. Automated Checks</span></a><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm text-[#52606d] hover:bg-[#eef4f4] hover:text-[#0f2327] transition-colors border-l-2 border-transparent" data-path="workflow-approvals" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular border border-[#cbd6d6] text-[#52606d]">5</span><span>5. Workflow &amp; Approvals</span></a><a class="flex items-center gap-space-md px-gutter py-space-sm text-title-sm font-title-sm bg-[#e4eeee] border-l-2 border-[#0b3c43] text-[#0b3c43] font-semibold" data-path="export-package" href="#"><span class="w-5 h-5 rounded-full flex items-center justify-center font-code-tabular text-code-tabular bg-[#0b3c43] text-white">6</span><span>6. Export / Package</span></a></nav></div><div class="px-gutter border-t border-[#cbd6d6] pt-space-md"><div class="flex items-center justify-between text-label-sm font-label-sm text-[#52606d]"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-[#179ea1]">verified</span>NBA / NAAC Format</span><span class="font-code-tabular text-code-tabular text-[#9a6b18] font-bold">v2.4.1</span></div></div></aside><div class="pl-64"><main class="w-full pt-14 bg-[#f4f7f6] min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Dossier Step Header Bar -->
+<div class="px-margin py-space-md bg-white border-b border-[#cbd6d6]">
+<div class="max-w-[1560px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#0b3c43] text-white font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[13px] text-[#1eb4b6]">verified</span>
+            06 | Step 6 of 6 • Dossier Export &amp; Accreditation Package
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-[#fef8ec] text-[#8a5d12] font-code-tabular text-label-sm font-semibold border border-[#e6ca85]">
+            FINAL SEAL • REV-2024.1d (BoS Approved)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-[#52606d] max-w-3xl">
+          Generate institutional archival formats, verified print dossier, and machine-readable accreditation schemas for CS302: Operating Systems &amp; Systems Programming.
+        </p>
+</div>
+<!-- Quick Metadata Pill Strip -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-[#eef4f4] border border-[#cbd6d6]">
+<span class="w-2 h-2 rounded-full bg-[#1eb4b6] shadow-xs"></span>
+<span class="font-label-sm text-label-sm text-[#52606d] uppercase font-bold">Status:</span>
+<span class="font-title-sm text-title-sm text-[#0b3c43] font-semibold">Accreditation Ready</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-[#eef4f4] border border-[#cbd6d6]">
+<span class="material-symbols-outlined text-[14px] text-[#179ea1]">fingerprint</span>
+<span class="font-label-sm text-label-sm text-[#52606d] uppercase font-bold">Digest:</span>
+<span class="font-code-tabular text-code-tabular text-[#0f2327] font-medium">sha256:7f89c0b1</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-[#fef8ec] border border-[#e6ca85]">
+<span class="material-symbols-outlined text-[14px] text-[#9a6b18]">draw</span>
+<span class="font-label-sm text-label-sm text-[#9a6b18] uppercase font-bold">Signed:</span>
+<span class="font-title-sm text-title-sm text-[#0f2327] font-semibold">Dr. A. Sharma (HOD)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Canvas Workstation (2 Columns Split) -->
+<div class="px-margin py-space-lg">
+<div class="max-w-[1560px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Physical Paper Document Preview (approx 68% / col-8) -->
+<div class="lg:col-span-8 flex flex-col space-y-space-md">
+<!-- Viewer Control Bar -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-white border border-[#cbd6d6] rounded-lg shadow-xs text-[#52606d]">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-[#0b3c43]">description</span>
+<span class="font-title-sm text-title-sm text-[#0f2327] font-semibold">Official Autonomous BoS Curriculum Specimen</span>
+<span class="text-[#cbd6d6]">|</span>
+<span class="font-label-md text-label-md uppercase text-[#9a6b18] font-bold">A4 Archival Sheet (1 of 3)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-[#eef4f4] text-[#52606d] hover:text-[#0f2327] transition-colors" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<span class="font-code-tabular text-code-tabular px-1.5 py-0.5 text-[#0f2327] font-semibold bg-[#eef4f4] rounded border border-[#cbd6d6]">100%</span>
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-[#eef4f4] text-[#52606d] hover:text-[#0f2327] transition-colors" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<div class="h-4 w-px bg-[#cbd6d6] mx-1"></div>
+<button class="px-2 py-1 rounded text-label-md font-label-md hover:bg-[#eef4f4] text-[#0b3c43] font-semibold flex items-center gap-1 border border-[#cbd6d6]" type="button">
+<span class="material-symbols-outlined text-[14px]">fit_screen</span>
+              Fit Width
+            </button>
+<button class="px-2 py-1 rounded text-label-md font-label-md bg-[#e4eeee] hover:bg-[#d9e6e6] text-[#0b3c43] font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">fullscreen</span>
+              Full Page
+            </button>
+</div>
+</div>
+<!-- Academic Paper Canvas Container -->
+<div class="p-space-lg bg-[#d8e2e2]/60 rounded-xl border border-[#cbd6d6] flex justify-center overflow-x-auto shadow-inner">
+<!-- Physical Paper Sheet Simulation (A4 Proportional Canvas, 100% crisp institutional styling) -->
+<article class="w-full max-w-[840px] bg-white text-slate-900 border border-slate-300 shadow-xl p-8 sm:p-12 relative flex flex-col font-sans">
+<!-- Document Formal University Header / Seal Block -->
+<div class="border-b-2 border-slate-800 pb-4 mb-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded border-2 border-[#0b3c43] flex flex-col items-center justify-center bg-[#f4f7f6] shrink-0 text-[#0b3c43]">
+<span class="material-symbols-outlined text-[36px]">account_balance</span>
+<span class="font-label-sm text-[8px] font-bold tracking-widest uppercase text-[#9a6b18]">ESTD 1964</span>
+</div>
+<div class="flex-1 text-center sm:text-left">
+<h1 class="font-headline-sm text-headline-sm uppercase text-[#0b3c43] tracking-tight font-bold">
+                    Metropolitan Institute of Technology &amp; Autonomous Research
+                  </h1>
+<p class="font-label-md text-label-md font-semibold text-slate-700 uppercase tracking-wide">
+                    Affiliated to State Technological University • Accredited 'A++' by NAAC • Tier-1 Accredited (NBA)
+                  </p>
+<p class="font-title-sm text-title-sm font-semibold text-slate-900 uppercase tracking-wider mt-0.5">
+                    Department of Computer Science &amp; Engineering
+                  </p>
+<p class="font-label-sm text-label-sm font-bold text-[#0b3c43] tracking-widest uppercase mt-0.5">
+                    BOARD OF STUDIES (BoS) OFFICIAL COURSE SPECIFICATION RECORD
+                  </p>
+</div>
+</div>
+</div>
+<!-- Metadata Master Table (Grid) -->
+<table class="w-full border-collapse border border-slate-400 font-body-sm text-body-sm mb-6 text-left">
+<tbody>
+<tr class="border-b border-slate-400 bg-slate-100">
+<th class="p-2 border-r border-slate-400 font-semibold w-1/4 text-slate-800 uppercase font-label-md text-label-md">Course Code</th>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-slate-900 w-1/4">CS302</td>
+<th class="p-2 border-r border-slate-400 font-semibold w-1/4 text-slate-800 uppercase font-label-md text-label-md">Academic Year</th>
+<td class="p-2 font-code-tabular text-slate-900 w-1/4">2024–2025 (Odd Semester)</td>
+</tr>
+<tr class="border-b border-slate-400">
+<th class="p-2 border-r border-slate-400 font-semibold text-slate-800 uppercase font-label-md text-label-md">Course Title</th>
+<td class="p-2 font-bold text-slate-900" colspan="3">Operating Systems &amp; Systems Programming</td>
+</tr>
+<tr class="border-b border-slate-400 bg-slate-100">
+<th class="p-2 border-r border-slate-400 font-semibold text-slate-800 uppercase font-label-md text-label-md">Curriculum Regulation</th>
+<td class="p-2 border-r border-slate-400 text-slate-900">R-2024 (Tier-1 Autonomous)</td>
+<th class="p-2 border-r border-slate-400 font-semibold text-slate-800 uppercase font-label-md text-label-md">Course Category</th>
+<td class="p-2 text-slate-900">Professional Core (PCC) / Integrated (T+P)</td>
+</tr>
+<tr>
+<th class="p-2 border-r border-slate-400 font-semibold text-slate-800 uppercase font-label-md text-label-md">Contact Hours / Week</th>
+<td class="p-2 border-r border-slate-400 font-code-tabular text-slate-900">3L + 0T + 2P (5 Contact Hrs)</td>
+<th class="p-2 border-r border-slate-400 font-semibold text-slate-800 uppercase font-label-md text-label-md">Total Earned Credits</th>
+<td class="p-2 font-code-tabular font-bold text-[#0b3c43]">4.0 Credits (3.0 Th + 1.0 Lab)</td>
+</tr>
+</tbody>
+</table>
+<!-- Section 1.0: Course Overview & Scope -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  1.0 Course Overview, Pedagogical Scope &amp; Rationale
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">AICTE Model Core Conformance</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-700 leading-relaxed text-justify mb-2">
+                CS302 provides foundational rigor in the architecture, abstractions, and implementation primitives of modern multi-user, multi-threaded operating systems. Emphasizing both POSIX kernel interface semantics and hardware-software interaction, the syllabus examines CPU scheduling paradigms, synchronization primitives (mutexes, semaphores, monitors), memory management hierarchies including demand paging and TLB translation, storage subsystem virtualization, and distributed file structures. 
+              </p>
+<p class="font-body-sm text-body-sm text-slate-700 leading-relaxed text-justify">
+                Through concurrent laboratory sessions, students synthesize real-time thread dispatchers, trace virtual address mappings, and implement custom virtual file system handlers using the C standard system calls library under Linux kernel v6.x.
+              </p>
+</div>
+<!-- Section 2.0: Credit & Contact Hour Structure -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  2.0 Contact Hour &amp; Credit Distribution Schedule
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Statutory 15-Week Term</span>
+</div>
+<table class="w-full border-collapse border border-slate-400 font-body-sm text-body-sm text-center">
+<thead class="bg-slate-100 font-label-md text-label-md uppercase text-slate-800 border-b border-slate-400">
+<tr>
+<th class="p-2 border-r border-slate-400 text-left">Component Category</th>
+<th class="p-2 border-r border-slate-400 w-28">Weekly Hours</th>
+<th class="p-2 border-r border-slate-400 w-32">Semester Total</th>
+<th class="p-2 border-r border-slate-400 w-24">Credits</th>
+<th class="p-2 text-left">Statutory Ratio Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-slate-300">
+<td class="p-2 border-r border-slate-400 text-left font-medium">Classroom Lectures (L)</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">3.0 Hrs</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">45.0 Hours</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-semibold">3.0</td>
+<td class="p-2 text-left text-slate-600 font-label-md">1 Contact Hour = 1 Credit</td>
+</tr>
+<tr class="border-b border-slate-300">
+<td class="p-2 border-r border-slate-400 text-left font-medium">Laboratory Practicum (P)</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">2.0 Hrs</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">30.0 Hours</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-semibold">1.0</td>
+<td class="p-2 text-left text-slate-600 font-label-md">2 Lab Hours = 1 Credit (AICTE 2:1)</td>
+</tr>
+<tr class="bg-slate-50 font-bold">
+<td class="p-2 border-r border-slate-400 text-left uppercase font-label-md">Consolidated Total</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">5.0 Hrs/Wk</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">75.0 Hours</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular text-[#0b3c43]">4.0 Credits</td>
+<td class="p-2 text-left text-emerald-700 font-label-md">Autonomous Board Compliant (100%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Section 3.0: Course Outcomes (COs) Table -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  3.0 Statutory Course Outcomes (COs)
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Revised Bloom's Taxonomy</span>
+</div>
+<table class="w-full border-collapse border border-slate-400 font-body-sm text-body-sm text-left">
+<thead class="bg-slate-100 font-label-md text-label-md uppercase text-slate-800 border-b border-slate-400">
+<tr>
+<th class="p-2 border-r border-slate-400 w-16 text-center">CO #</th>
+<th class="p-2 border-r border-slate-400">Outcome Articulation Statement</th>
+<th class="p-2 border-r border-slate-400 w-36 text-center">Taxonomy Level</th>
+<th class="p-2 w-32 text-center">Target POs</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-300">
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO1</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Explain operating system kernel architectures, dual-mode hardware enforcement, and interrupt-driven context dispatching.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L2: Understand</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO1, PO2</td>
+</tr>
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO2</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Construct and execute multi-process concurrent systems using POSIX threads, IPC pipes, and mutex synchronizers.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L3: Apply</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO1, PO3, PSO1</td>
+</tr>
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO3</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Analyze CPU dispatching algorithms and race hazard conditions to construct deadlock prevention and detection graphs.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L4: Analyze</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO2, PO4</td>
+</tr>
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO4</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Evaluate virtual memory paging strategies, page fault servicing delays, and working-set frame allocation schemes.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L5: Evaluate</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO3, PO5, PSO2</td>
+</tr>
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO5</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Appraise storage allocation mechanisms, journaling inode file structures, and I/O bus throughput benchmarks.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L5: Evaluate</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO4, PO5</td>
+</tr>
+<tr>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-center text-[#0b3c43]">CO6</td>
+<td class="p-2 border-r border-slate-400 text-slate-800">
+                      Formulate defensible security policies addressing privilege escalation, access control lists, and hardware-enforced protection domains.
+                    </td>
+<td class="p-2 border-r border-slate-400 text-center font-label-md text-slate-700">L4: Analyze</td>
+<td class="p-2 text-center font-code-tabular text-slate-700 font-medium">PO6, PO8, PSO3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Section 4.0: Course Modular Syllabus -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  4.0 Modular Syllabus &amp; Lab Integration
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Five Instructional Modules</span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm">
+<div class="border border-slate-300 rounded p-2.5 bg-slate-50">
+<div class="flex justify-between items-center font-semibold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">
+<span>Module I: Operating System Structure &amp; Process Abstraction</span>
+<span class="font-code-tabular text-[#0b3c43]">09 Th Hrs | 06 Lab Hrs</span>
+</div>
+<p class="text-slate-700 text-xs leading-relaxed">
+                    Monolithic vs microkernel OS designs; Trap handling; Dual-mode CPU architecture; Process control blocks (PCB); Context switching mechanics; Fork-exec UNIX API; Linux CFS scheduler basics.
+                  </p>
+<p class="text-xs text-slate-600 mt-1 italic">
+<span class="font-semibold text-slate-700">Mandatory Lab:</span> Exp 1: Process hierarchy inspection via `procfs`; Exp 2: Custom CPU-bound fork/exec benchmarking wrapper.
+                  </p>
+</div>
+<div class="border border-slate-300 rounded p-2.5 bg-slate-50">
+<div class="flex justify-between items-center font-semibold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">
+<span>Module II: Concurrency, Synchronization &amp; Deadlocks</span>
+<span class="font-code-tabular text-[#0b3c43]">09 Th Hrs | 06 Lab Hrs</span>
+</div>
+<p class="text-slate-700 text-xs leading-relaxed">
+                    Race conditions; Peterson’s algorithm; Hardware test-and-set instructions; Semaphores; Condition variables; Readers-Writers &amp; Dining Philosophers; Banker’s safety algorithm.
+                  </p>
+<p class="text-xs text-slate-600 mt-1 italic">
+<span class="font-semibold text-slate-700">Mandatory Lab:</span> Exp 3: Multi-threaded Producer-Consumer bounded queue using pthread condition variables.
+                  </p>
+</div>
+<div class="border border-slate-300 rounded p-2.5 bg-slate-50">
+<div class="flex justify-between items-center font-semibold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">
+<span>Module III: Physical &amp; Virtual Memory Architecture</span>
+<span class="font-code-tabular text-[#0b3c43]">09 Th Hrs | 06 Lab Hrs</span>
+</div>
+<p class="text-slate-700 text-xs leading-relaxed">
+                    Contiguous allocation &amp; fragmentation; Segmentation; Hierarchical &amp; inverted page tables; Translation Lookaside Buffers (TLB); Page replacement (LRU, FIFO, Clock); Thrashing &amp; working-set model.
+                  </p>
+<p class="text-xs text-slate-600 mt-1 italic">
+<span class="font-semibold text-slate-700">Mandatory Lab:</span> Exp 4: Emulation of multi-level page table walking with LRU page fault count simulator in C.
+                  </p>
+</div>
+<div class="border border-slate-300 rounded p-2.5 bg-slate-50">
+<div class="flex justify-between items-center font-semibold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">
+<span>Module IV: Mass Storage &amp; Virtual File Systems (VFS)</span>
+<span class="font-code-tabular text-[#0b3c43]">09 Th Hrs | 06 Lab Hrs</span>
+</div>
+<p class="text-slate-700 text-xs leading-relaxed">
+                    Magnetic &amp; SSD storage geometry; Disk arm scheduling (SCAN, C-LOOK); File descriptor tables; Inodes; Ext4 vs ZFS journaling; VFS abstraction layers; NFS remote procedures.
+                  </p>
+<p class="text-xs text-slate-600 mt-1 italic">
+<span class="font-semibold text-slate-700">Mandatory Lab:</span> Exp 5: Userspace disk image traversal and raw Inode metadata extractor utility.
+                  </p>
+</div>
+<div class="border border-slate-300 rounded p-2.5 bg-slate-50">
+<div class="flex justify-between items-center font-semibold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">
+<span>Module V: Protection, Security &amp; Virtualization</span>
+<span class="font-code-tabular text-[#0b3c43]">09 Th Hrs | 06 Lab Hrs</span>
+</div>
+<p class="text-slate-700 text-xs leading-relaxed">
+                    Access control matrices; Role-based access control (RBAC); Type 1 &amp; Type 2 hypervisors; Linux namespaces &amp; cgroups containerization; POSIX capabilities &amp; seccomp filters.
+                  </p>
+<p class="text-xs text-slate-600 mt-1 italic">
+<span class="font-semibold text-slate-700">Mandatory Lab:</span> Exp 6: Building a lightweight isolated container environment using clone(2), unshare(2), and cgroups v2.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Section 5.0: Assessment Scheme & Evaluation Weightage -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  5.0 Assessment Scheme &amp; Weightage Matrix
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">CIE 60% : SEE 40% Standard</span>
+</div>
+<table class="w-full border-collapse border border-slate-400 font-body-sm text-body-sm text-center">
+<thead class="bg-slate-100 font-label-md text-label-md uppercase text-slate-800 border-b border-slate-400">
+<tr>
+<th class="p-2 border-r border-slate-400 text-left">Assessment Component</th>
+<th class="p-2 border-r border-slate-400 w-36">Evaluation Mode</th>
+<th class="p-2 border-r border-slate-400 w-24">Marks</th>
+<th class="p-2 border-r border-slate-400 w-24">Weight</th>
+<th class="p-2 text-left">Compliance Check</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-slate-300">
+<td class="p-2 border-r border-slate-400 text-left">Continuous Internal Evaluation (Theory Mid-Terms 1 &amp; 2)</td>
+<td class="p-2 border-r border-slate-400">Written Proctored Exam</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">50 Marks</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-medium">30.0%</td>
+<td class="p-2 text-left text-xs text-slate-600 font-label-md">Average of best 2 tests</td>
+</tr>
+<tr class="border-b border-slate-300">
+<td class="p-2 border-r border-slate-400 text-left">Continuous Laboratory Assessment (Rubric-driven lab performance)</td>
+<td class="p-2 border-r border-slate-400">Weekly Viva + Code Execution</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">30 Marks</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-medium">20.0%</td>
+<td class="p-2 text-left text-xs text-slate-600 font-label-md">Continuous Lab Portfolio</td>
+</tr>
+<tr class="border-b border-slate-300">
+<td class="p-2 border-r border-slate-400 text-left">Experiential Term Project (Micro-OS Kernel subsystem build)</td>
+<td class="p-2 border-r border-slate-400">Peer Review &amp; Git Repository</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">20 Marks</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-medium">10.0%</td>
+<td class="p-2 text-left text-xs text-slate-600 font-label-md">Rubric Tier-A (Industry Standard)</td>
+</tr>
+<tr class="border-b border-slate-400 bg-slate-50 font-medium">
+<td class="p-2 border-r border-slate-400 text-right uppercase font-label-md text-slate-700" colspan="3">Subtotal CIE:</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-bold text-slate-900">60.0%</td>
+<td class="p-2 text-left text-xs text-emerald-700 font-label-md">Internal Threshold Satisfied</td>
+</tr>
+<tr class="border-b border-slate-400">
+<td class="p-2 border-r border-slate-400 text-left">Semester End Examination (SEE - Comprehensive Theory &amp; Lab Practical)</td>
+<td class="p-2 border-r border-slate-400">Central University Board Exam</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular">100 Marks</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular font-medium">40.0%</td>
+<td class="p-2 text-left text-xs text-slate-600 font-label-md">External Examiner Moderated</td>
+</tr>
+<tr class="bg-slate-100 font-bold">
+<td class="p-2 border-r border-slate-400 text-right uppercase font-label-md text-slate-900" colspan="3">Grand Total Evaluation Sum:</td>
+<td class="p-2 border-r border-slate-400 font-code-tabular text-[#0b3c43]">100.0%</td>
+<td class="p-2 text-left text-xs text-emerald-700 font-semibold font-label-md">Exact 100.0% Normalization Verified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Section 6.0: CO-PO-PSO Outcome Mapping Matrix -->
+<div class="mb-6">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  6.0 CO-PO-PSO Articulation Matrix (NBA SAR Format)
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">3: Substantial | 2: Moderate | 1: Slight | - : None</span>
+</div>
+<!-- Matrix Table with Fixed Cells -->
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-slate-400 font-body-sm text-body-sm text-center">
+<thead class="bg-slate-100 font-label-sm text-[10px] uppercase text-slate-800 border-b border-slate-400">
+<tr>
+<th class="p-1 border-r border-slate-400 w-12 text-left">CO #</th>
+<th class="p-1 border-r border-slate-300 w-8">PO1</th>
+<th class="p-1 border-r border-slate-300 w-8">PO2</th>
+<th class="p-1 border-r border-slate-300 w-8">PO3</th>
+<th class="p-1 border-r border-slate-300 w-8">PO4</th>
+<th class="p-1 border-r border-slate-300 w-8">PO5</th>
+<th class="p-1 border-r border-slate-300 w-8">PO6</th>
+<th class="p-1 border-r border-slate-300 w-8">PO7</th>
+<th class="p-1 border-r border-slate-300 w-8">PO8</th>
+<th class="p-1 border-r border-slate-300 w-8">PO9</th>
+<th class="p-1 border-r border-slate-300 w-8">PO10</th>
+<th class="p-1 border-r border-slate-400 w-8">PO11</th>
+<th class="p-1 border-r border-slate-300 w-8 bg-[#eef4f4] text-[#0b3c43] font-bold">PSO1</th>
+<th class="p-1 border-r border-slate-300 w-8 bg-[#eef4f4] text-[#0b3c43] font-bold">PSO2</th>
+<th class="p-1 w-8 bg-[#eef4f4] text-[#0b3c43] font-bold">PSO3</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-300 font-code-tabular text-xs">
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO1</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-400 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 border-r border-slate-300 bg-[#eef4f4]/60">1</td>
+<td class="p-1 bg-[#eef4f4]/60 text-slate-400">-</td>
+</tr>
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO2</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-400">1</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 bg-[#eef4f4]/60">1</td>
+</tr>
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO3</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-400 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">2</td>
+<td class="p-1 bg-[#eef4f4]/60 text-slate-400">-</td>
+</tr>
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO4</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-400 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 bg-[#eef4f4]/60">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 bg-[#eef4f4]/60">1</td>
+</tr>
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO5</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-400 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 bg-[#eef4f4]/60">2</td>
+<td class="p-1 border-r border-slate-300 font-semibold bg-[#eef4f4]/60">3</td>
+<td class="p-1 bg-[#eef4f4]/60">2</td>
+</tr>
+<tr>
+<td class="p-1 border-r border-slate-400 font-bold text-[#0b3c43] text-left">CO6</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300">1</td>
+<td class="p-1 border-r border-slate-300 font-semibold">3</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-400 text-slate-400">-</td>
+<td class="p-1 border-r border-slate-300 bg-[#eef4f4]/60">1</td>
+<td class="p-1 border-r border-slate-300 bg-[#eef4f4]/60">2</td>
+<td class="p-1 bg-[#eef4f4]/60 font-semibold">3</td>
+</tr>
+<tr class="bg-slate-100 font-bold border-t-2 border-slate-400">
+<td class="p-1 border-r border-slate-400 text-left font-label-sm text-[10px] uppercase">Avg</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.17</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.17</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.75</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.25</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.00</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">2.00</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">1.00</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">3.00</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">1.50</td>
+<td class="p-1 border-r border-slate-300 text-[#0b3c43]">1.00</td>
+<td class="p-1 border-r border-slate-400 text-[#0b3c43]">1.00</td>
+<td class="p-1 border-r border-slate-300 bg-[#e0f7f8] text-[#084c4e]">2.33</td>
+<td class="p-1 border-r border-slate-300 bg-[#e0f7f8] text-[#084c4e]">2.33</td>
+<td class="p-1 bg-[#e0f7f8] text-[#084c4e]">1.75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 7.0: Prescribed Textbooks & Reference Standards -->
+<div class="mb-8">
+<div class="flex items-center justify-between border-b border-slate-400 pb-1 mb-2">
+<h2 class="font-title-sm text-title-sm uppercase font-bold text-[#0b3c43] tracking-wide">
+                  7.0 Prescribed Textbooks &amp; Reference Standards
+                </h2>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Statutory Reading List</span>
+</div>
+<ol class="list-decimal list-inside space-y-1.5 font-body-sm text-body-sm text-slate-800">
+<li class="leading-relaxed">
+<span class="font-semibold">Silberschatz, A., Galvin, P. B., &amp; Gagne, G.</span> (2018). <em>Operating System Concepts</em> (10th International Student Ed.). John Wiley &amp; Sons. ISBN: 978-1-119-45633-9.
+                </li>
+<li class="leading-relaxed">
+<span class="font-semibold">Arpaci-Dusseau, R. H., &amp; Arpaci-Dusseau, A. C.</span> (2018). <em>Operating Systems: Three Easy Pieces</em> (v1.00). Arpaci-Dusseau Books. (Virtualization, Concurrency, Persistence).
+                </li>
+<li class="leading-relaxed">
+<span class="font-semibold">Love, R.</span> (2010). <em>Linux Kernel Development</em> (3rd Ed.). Addison-Wesley Professional. ISBN: 978-0-672-32946-3.
+                </li>
+<li class="leading-relaxed">
+<span class="font-semibold">IEEE &amp; The Open Group.</span> (2018). <em>Standard for Information Technology—Portable Operating System Interface (POSIX®) Base Specifications</em>, Issue 7 (IEEE Std 1003.1-2017).
+                </li>
+</ol>
+</div>
+<!-- Institutional Signatory Block (Formal Footer) -->
+<div class="mt-auto pt-6 border-t-2 border-slate-800">
+<div class="grid grid-cols-3 gap-6 text-center">
+<div class="flex flex-col items-center">
+<div class="h-10 flex items-center justify-center text-[#0b3c43] opacity-80 mb-1">
+<span class="font-serif italic font-bold tracking-wider text-sm">Prof. S. Jenkins</span>
+</div>
+<div class="w-full border-t border-slate-400 pt-1">
+<p class="font-title-sm text-title-sm font-semibold text-slate-900">Prof. S. Jenkins</p>
+<p class="font-label-sm text-label-sm text-slate-600">Course Coordinator / Author</p>
+<p class="font-code-tabular text-[10px] text-slate-500">Sign: Verified 22-Oct-2024</p>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="h-10 flex items-center justify-center text-[#0b3c43] opacity-80 mb-1">
+<span class="font-serif italic font-bold tracking-wider text-sm">Dr. M. Vance</span>
+</div>
+<div class="w-full border-t border-slate-400 pt-1">
+<p class="font-title-sm text-title-sm font-semibold text-slate-900">Dr. M. Vance</p>
+<p class="font-label-sm text-label-sm text-slate-600">Lead Curriculum Reviewer</p>
+<p class="font-code-tabular text-[10px] text-slate-500">Sign: Verified 23-Oct-2024</p>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="h-10 flex items-center justify-center text-[#0b3c43] opacity-80 mb-1">
+<span class="font-serif italic font-bold tracking-wider text-sm">Dr. A. Sharma</span>
+</div>
+<div class="w-full border-t border-slate-400 pt-1">
+<p class="font-title-sm text-title-sm font-semibold text-slate-900">Dr. A. Sharma</p>
+<p class="font-label-sm text-label-sm text-slate-600">Head of Department (CSE)</p>
+<p class="font-code-tabular text-[10px] text-slate-500">Sign: Verified 24-Oct-2024</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-[10px] font-code-tabular text-slate-500">
+<span>BoS Resolution Reference: CSE-2024/CURR-88</span>
+<span>Document Fingerprint: 7f89c0b1e459a8c20491dd629fae33b0</span>
+<span>Page 1 of 3 (Official Archival Specimen)</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- RIGHT COLUMN: Export Actions & Pre-Flight Checklist (approx 32% / col-4) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Card 1: Export & Delivery Actions -->
+<div class="bg-white border border-[#cbd6d6] rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between border-b border-[#cbd6d6] pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-[#0b3c43]">cloud_download</span>
+<h3 class="font-headline-sm text-headline-sm text-[#0f2327]">Export &amp; Deliverables</h3>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm uppercase bg-[#fef8ec] text-[#8a5d12] border border-[#e6ca85] font-semibold">
+              Target: Final
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-[#52606d]">
+            Export legally approved course records formatted for standard accreditation boards (NBA, NAAC, ABET) or enterprise curriculum archives.
+          </p>
+<!-- Primary Button: Print / PDF -->
+<div class="flex flex-col space-y-1">
+<button class="w-full flex items-center justify-center gap-space-sm px-4 py-3 rounded-lg bg-[#0b3c43] hover:bg-[#0a444e] active:bg-[#072d32] text-white transition-all shadow-md font-title-sm text-title-sm group" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#1eb4b6] group-hover:scale-105 transition-transform">print</span>
+<span class="font-semibold">Print / Save as PDF</span>
+</button>
+<span class="font-label-sm text-label-sm text-[#9a6b18] text-center px-1 font-medium">
+              Formatted for standard A4 archival prints with running BoS headers &amp; watermarks.
+            </span>
+</div>
+<!-- Secondary Actions -->
+<div class="space-y-space-sm pt-space-xs border-t border-[#cbd6d6]">
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-[#eef4f4] hover:bg-[#e4eeee] border border-[#cbd6d6] text-[#0f2327] transition-colors" type="button">
+<div class="flex items-center gap-space-sm text-left">
+<span class="material-symbols-outlined text-[20px] text-[#179ea1]">html</span>
+<div>
+<div class="font-title-sm text-title-sm font-semibold">Download HTML Document</div>
+<div class="font-label-sm text-label-sm text-[#52606d]">Standalone responsive file with bundled CSS</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-[#0b3c43]">download</span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-[#eef4f4] hover:bg-[#e4eeee] border border-[#cbd6d6] text-[#0f2327] transition-colors" type="button">
+<div class="flex items-center gap-space-sm text-left">
+<span class="material-symbols-outlined text-[20px] text-[#0b3c43]">data_object</span>
+<div>
+<div class="font-title-sm text-title-sm font-semibold">Download Output File (JSON)</div>
+<div class="font-label-sm text-label-sm text-[#52606d]">Machine-readable schema for NAAC SSR / NBA e-SAR</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-[#0b3c43]">code</span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-[#eef4f4] hover:bg-[#e4eeee] border border-[#cbd6d6] text-[#0f2327] transition-colors" type="button">
+<div class="flex items-center gap-space-sm text-left">
+<span class="material-symbols-outlined text-[20px] text-[#b88730]">folder_zip</span>
+<div>
+<div class="font-title-sm text-title-sm font-semibold">Full Dossier ZIP Bundle</div>
+<div class="font-label-sm text-label-sm text-[#52606d]">Includes PDFs, syllabus, matrices &amp; signed audit trail</div>
+</div>
+</div>
+<span class="font-code-tabular text-label-sm font-bold text-[#9a6b18] px-1.5 py-0.5 rounded bg-[#fef8ec] border border-[#e6ca85]">1.8 MB</span>
+</button>
+</div>
+<div class="pt-space-xs">
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-label-md font-label-md text-[#0b3c43] font-semibold hover:bg-[#eef4f4] border border-transparent hover:border-[#cbd6d6] transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#179ea1]">link</span>
+              Copy Immutable Dossier Link
+            </button>
+</div>
+</div>
+<!-- Card 2: Pre-Flight Publication Checklist -->
+<div class="bg-white border border-[#cbd6d6] rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between border-b border-[#cbd6d6] pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-emerald-700">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-[#0f2327]">Pre-Flight Publication Check</h3>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm border border-emerald-300 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              All 3 Passed
+            </span>
+</div>
+<!-- Checklist Items -->
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-300">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#0f2327] font-semibold">Template sections complete</span>
+<p class="font-body-sm text-body-sm text-[#52606d] leading-snug">
+                  All 7 statutory sections present, structured, and compliant with Autonomous Regulation R-2024.
+                </p>
+<span class="font-code-tabular text-[11px] text-emerald-700 mt-0.5 font-medium">Checked against BoS Standard Template v2.4</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-300">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#0f2327] font-semibold">No leftover sample text</span>
+<p class="font-body-sm text-body-sm text-[#52606d] leading-snug">
+                  0 placeholder strings or draft annotations detected across 24 syllabus blocks.
+                </p>
+<span class="font-code-tabular text-[11px] text-emerald-700 mt-0.5 font-medium">Regex search passed: 0 `[TODO]` or `[TBD]` tokens</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-300">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#0f2327] font-semibold">Weights total 100%</span>
+<p class="font-body-sm text-body-sm text-[#52606d] leading-snug">
+                  CIE (60.0%) and SEE (40.0%) sum precisely to 100.0% with zero rounding discrepancy.
+                </p>
+<span class="font-code-tabular text-[11px] text-emerald-700 mt-0.5 font-medium">Math balance: 30% + 20% + 10% + 40% = 100.0%</span>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-[#eef4f4] border border-[#cbd6d6] flex items-center gap-space-sm text-[#52606d]">
+<span class="material-symbols-outlined text-[18px] text-[#0b3c43]">security</span>
+<span class="font-label-sm text-label-sm text-[#0f2327]">
+              Pre-flight validation executed by Engine v2.4.1. Document passes AICTE &amp; NBA SAR compliance checks.
+            </span>
+</div>
+</div>
+<!-- Card 3: Accreditation Metadata & Audit Seal -->
+<div class="bg-white border border-[#cbd6d6] rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between border-b border-[#cbd6d6] pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-[#b88730]">workspace_premium</span>
+<h3 class="font-headline-sm text-headline-sm text-[#0f2327]">Accreditation Audit Seal</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-[#fef8ec] text-[#8a5d12] border border-[#e6ca85] font-bold">
+              Sealed &amp; Locked
+            </span>
+</div>
+<div class="space-y-space-sm">
+<div class="flex justify-between items-center py-1.5 border-b border-[#eef4f4]">
+<span class="font-label-md text-label-md text-[#52606d]">Cryptographic Digest</span>
+<span class="font-code-tabular text-label-sm text-[#0b3c43] font-bold">SHA-256: 7f89c0b1...3e</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-[#eef4f4]">
+<span class="font-label-md text-label-md text-[#52606d]">BoS Resolution</span>
+<span class="font-code-tabular text-label-sm text-[#0f2327] font-semibold">CSE-2024/CURR-88</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-[#eef4f4]">
+<span class="font-label-md text-label-md text-[#52606d]">Approval Timestamp</span>
+<span class="font-code-tabular text-label-sm text-[#0f2327]">24-Oct-2024 16:42 IST</span>
+</div>
+<div class="flex justify-between items-center py-1.5 border-b border-[#eef4f4]">
+<span class="font-label-md text-label-md text-[#52606d]">Accreditation Criterion</span>
+<span class="font-title-sm text-label-sm text-[#0f2327] font-semibold">NBA Tier-1 / NAAC 1.1.2</span>
+</div>
+<div class="flex justify-between items-center py-1.5">
+<span class="font-label-md text-label-md text-[#52606d]">Version Archival State</span>
+<span class="font-code-tabular text-label-sm text-emerald-700 font-bold">LOCKED_CANONICAL</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-[#cbd6d6] flex items-center justify-between">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-[#0b3c43] font-semibold hover:text-[#0a444e] hover:underline" href="#">
+<span>View Full Audit Trail (Step 5)</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-[#9a6b18] font-medium">Ready for e-SAR ingest</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

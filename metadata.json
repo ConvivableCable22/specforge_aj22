@@ -1,0 +1,6 @@
+{
+  "name": "SpecForge - Course Specification System",
+  "description": "Curriculum engine and dossier export system for NBA/NAAC accreditation compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
